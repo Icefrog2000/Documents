@@ -1,0 +1,68 @@
+analyze all: aaa    
+show sections: iS
+list functions: afl
+list imports: ii
+list entrypoints: ie
+afi to get current function information
+is: list the symbols
+izz print all string in file
+iz print string in this section
+dm: print memory map
+dr: CPU register
+dc: continue execution when debug
+dcu: debug continue until 
+dbH <addr>: hard breakpoint
+dbd <addr>: disable breakpoint
+dbe <addr>: enable breakpoint
+dbi: list breakpoint index
+dbid, dbie <addr>: disable/enable breakpoint by index
+db-*: remove all breakpoints
+db- <addr>: guess
+px: hiển thị giá trị tại tham chiếu tại địa chỉ. Ví dụ: px 4 @ebp, in ra 4 bytes tại địa chỉ của ebp
+afvd: in giá trị của các biến trong hàm hiện tại, xịn vl
+pxo: giống px nhưng là in ở dạng số thập phân
+px0: in giống px nhưng đến 0 thì dừng lại
+pq: in QR code, dell biết để làm gì
+pdf: hiển thị code assembly của hàm hiện tại
+r2 -e dbg.profile=profile.rr2 -d a.out
+!: hien thi lich su go lenh
+pd + so dong: hien thi so dong disassembly code tu dia chi hien tai
+grep: nhu kieu grep trong linux
+?$?: hien thi cac bien mac dinh cua radare2. vi du nhu $s: file size
+e dbg.bep=entry or e dbg.bep=main: cai nay de radare2 ko load library ma nhay thang vao entry point hoac main
+dcs + ten cua syscall: continue until syscall
+dr eax=33: thay doi gia tri thanh ghi
+Ve: thay doi cac gia tri configuration, thay vi dung e thi dung Ve o dang visual mode, 
+!!ls: chay command ls cua linux trong r2, hay vl
+/ lib: search string 'lib', hay vl
+o=: hien thi cac file dang duoc mo
+pc 40: print 40 byte duoi dang code cua C, hay vl, do phai dung dau ,
+pcp: la duoi dabg code cua python 
+ps: print string
+psb: print string cua cai block hex hien tai
+wa: thay doi opcode
+w: ghi de string
+ww: cung la ghi de string, nhung la wide string
+wo: tu xem huong dan nhe, hoi dai nhung hay phet 
+
+Phim tat trong visual mode:
+a: thay doi opcode, dinh vl
+! vao che do panel neu trong visual mode
+b: bat tat breakpoint
+C: thay doi color
+c: bat tat con tro
+;[-] comment: them /xoa comment trong visual mode
+trong che do con tro, muon chuyen panel thi an tab
+/a mov eax, ebx: de search instruction
+axt: tim tham chieu den dia chi
+axff: hien thi tat ca cac tham chieu trong cai ham hien tai, cai nay dung vui hon
+pdc: decompile ne
+doo: reopen debug mode, fucking ood
+ie: hien thi entry point
+iee: ca entry ca ham exit
+iS: hien thi section
+iSS: hien thi segment
+iM: hien thi dia chi cua main
+
+
+

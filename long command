@@ -1,0 +1,4 @@
+echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
+gcc vuln.c -o vuln_disable_all -fno-stack-protector -z execstack -no-pie
+strings -o -t x ./3x17
+

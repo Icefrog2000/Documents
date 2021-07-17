@@ -1,0 +1,27 @@
+Di den cuoi dau hoac cuoi ngoac kep            ctrl + shift + \
+Tim kiem o tat ca cac file                     ctrl + shift + f
+Reopen a closed file                           ctrl + shift + t
+Tim file roi mo no                             ctrl + shift + e  
+Them con tro vao cac dong khac                 ctrl + shift + PgUp, ctrl + shift + PgDn
+Di chuyen nhanh con tro sang trai hoac phai    ctrl + ->, ctrl + <-
+Di chuyen giua cac tab                         Giu Alt roi an cac so tuong ung so thu tu cua tab
+Xoa 1 tu o phia truoc                          ctrl + backspace
+Duplicate line                                 ctrl + shift + d
+Xoa 1 dong                                     ctrl + x
+split editor                                   ctrl + \
+select word                                    ctrl + d
+bat hoac tat slide bar                         ctrl + b
+Go to symbols in file                          ctrl + shift + o
+Column selection                               Giu shift + alt roi di chuot
+Comment cai dong do                            ctrl + /
+Close cai tab hien tai                         ctrl + w
+Zoom in/out                                    ctrl + =/-
+Thay the                                       ctrl + h
+Select all occurences of Find match            alt + enter
+1 cach tien hon la                             ctrl + shift + l
+
+(O cac ban phim khong co nut home/end thi thay vao do se la fc <- va fn ->)
+di chuyen den dau hoac cuoi file               ctrl + fn <- hoac ctrl + fn ->
+di chuyen con tro den dau hoac cuoi file       fn <-, fn ->
+
+scroll nhung khong thay doi con tro            ctrl + PgUp, ctrl + PgDn

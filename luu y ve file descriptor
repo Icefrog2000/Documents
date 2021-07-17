@@ -1,0 +1,10 @@
+1. stdin la 0, stdout la 1 va stderr la 2
+2. Flag trong ham open
+   O_ASYNC: 
+   O_APPEND: cac ham write luon viet vao cuoi file, easy
+   O_FSYNC: thang nay dam bao rang khi goi ham write, no phai write het vao file roi moi return
+   O_NONBLOCK: vi du thang read(), no se return false luon neu ko co byte nao dc doc tu file, write() se return false luon neu ko co byte nao dc viet vao file
+               tuc la binh thuong read() neu ko thay byte nao dc doc, no se doi I/O, dan den tinh trang block va cac code phia sau khong chay dc, neu bat co O_NONBLOCK thi se ko gap tinh trang kieu nay
+   O_CLOEXEC: It marks the file descriptor so that it will be close()d automatically when the process or any children it fork()s calls one of the exec*() family of functions. This is useful to keep from leaking your file descriptors to random programs run by e.g. system(). Cai nay chac sau thi CTF se biet them
+   O_TRUNC: neu file ton tai thi no se xoa het data trong file
+   O_EXCL: This flag is used in conjunction with O_CREAT to indicate that if the file already exists, it should not be opened; instead, open() should fail, with errno set to EEXIST

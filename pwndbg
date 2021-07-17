@@ -1,0 +1,108 @@
+alias -- Define a new command that is an alias of an existing command.
+arena -- Print the contents of an arena, default to the current thread's arena.
+arenas -- List this process's arenas.
+argc -- Prints out the number of arguments.
+argv -- Prints out the contents of argv.
+aslr -- Check the current ASLR status, or turn it on/off.
+
+backtrace, where, bt -- Print backtrace of all stack frames, or innermost COUNT frames.
+bc -- Clear the breakpoint with the specified index.
+bd -- Disable the breakpoint with the specified index.
+be -- Enable the breakpoint with the specified index.
+bins -- Print the contents of all an arena's bins and a thread's tcache, default to the current thread's arena and tcache.
+bl -- List breakpoints.
+bp -- Set a breakpoint at the specified address.
+break-range -- Set a breakpoint for an address range.
+
+canary -- Print out the current stack canary.
+clear, cl -- Clear breakpoint at specified location.
+context -- Print out the current register, instruction, and stack context.
+contextghidra -- Show current function decompiled by ghidra
+continue, fg, c -- Continue program being debugged, after signal or breakpoint.
+
+da -- Dump a string at the specified address.
+db -- Starting at the specified address, dump N bytes.
+delete, del, d -- Delete all or some breakpoints.
+distance -- Print the distance between the two arguments.
+dump -- Dump target code/data to a local file.
+dump binary -- Write target code/data to a raw binary file.
+dumpargs -- Prints determined arguments for call instruction.
+
+eb -- Write hex bytes at the specified address.
+edit -- Edit specified file or function.
+elfheader -- Prints the section mappings contained in the ELF header.
+enable, en -- Enable all or some breakpoints.
+emulate -- Like nearpc, but will emulate instructions from the current $PC forward.
+entry -- Set a breakpoint at the first instruction executed in
+envp -- Prints out the contents of the environment.
+ez -- Write a string at the specified address.
+
+fastbins -- Print the contents of an arena's fastbins, default to the current thread's arena.
+find -- Search memory for a sequence of bytes.
+find_fake_fast -- Find candidate fake fast chunks overlapping the specified address.
+finish, fin -- Execute until selected stack frame returns.
+
+hbreak -- Set a hardware assisted breakpoint.
+heap -- Iteratively print chunks on a heap, default to the current thread's active heap.
+hexdump -- Hexdumps data at the specified address or module name (or at $sp)
+	
+if -- Execute nested commands once IF the conditional expression is non zero.
+info args -- All argument variables of current stack frame or those matching REGEXPs.
+info address -- Describe where symbol SYM is stored.
+info all-registers -- List of all registers and their contents, for selected stack frame.
+info variables -- All global and static variable names or those matching REGEXPs.
+info symbol -- Describe what symbol is at location ADDR.
+info source -- Information about the current source file.
+info functions -- All function names or those matching REGEXPs.
+info program -- Execution status of the program.
+info threads -- Display currently known threads.
+info stack, info s -- Backtrace of the stack, or innermost COUNT frames.
+info breakpoints, info b -- Status of specified breakpoints (all user-settable breakpoints if no argument).
+info file -- hien thi dia chi cua cac section nhe, cai nay xin hon vmmap
+
+j -- Synchronize IDA's cursor with GDB
+
+k -- Print a backtrace (alias 'bt').
+
+largebins -- Print the contents of an arena's largebins, default to the current thread's arena.
+
+nearpc -- Disassemble near a specified address.
+
+nextjmp -- Breaks at the next jump instruction.
+next, n -- Step program, proceeding through subroutine calls.
+nextcall -- Breaks at the next call instruction
+nextsyscall -- Breaks at the next syscall not taking branches.
+
+pid -- Gets the pid.
+print, inspect, p -- Print value of expression EXP.
+python, py -- Evaluate a Python command.
+
+rbreak -- Set a breakpoint for all functions matching REGEXP.
+regs -- Print out all registers and enhance the information.
+reload -- Reload pwndbg.
+ropgadget -- Dump ROP gadgets with Jon Salwan's ROPgadget tool.
+run, r -- Start debugged program.
+ropper -- ROP gadget search with ropper.
+
+search -- Search memory for byte sequences, strings, pointers, and integer values
+save -- Save breakpoint definitions as a script.
+step, s -- Step program until it reaches a different source line.
+stack -- dereferences on stack data with specified count and offset.
+start -- Set a breakpoint at a convenient location in the binary,
+shell, ! -- Execute the rest of the line as a shell command.
+
+tcache -- Print a thread's tcache contents, default to the current thread's tcache.
+trace, trac, tra, tr, tp -- Set a tracepoint at specified location.
+
+until -- Execute until past the current line or past a LOCATION.
+
+while -- Execute nested commands WHILE the conditional expression is non zero.
+
+xinfo -- Shows offsets of the specified address to useful other locations
+xor -- XOR `count` bytes at address` with the key key`.
+xuntil -- Continue execution until an address or function.
+
+
+
+
+

@@ -1,0 +1,27 @@
+1. 0x3ebca0
+
+2. Co the leak duoc libc bang cach loi dung unsorted_bin, chunk dau tien trong unsorted_bin co fd tro toi main_arena + 96 (Day la phien ban moi, co them truong have_fast, o cac phien ban cu la main_arena + 88), neu leak duoc fd thi se leak duoc main_arena, leak duoc main_arena thi se leak duoc libc base. Co mot meo de day chunk vao Unsorted bin ma khong thong qua Tcache bin va Fast bin, nhac lai mot so ly thuyet:
+
+    - Confusingly, the small, large, and unsorted bins all live together in the same array in the heap manager’s source code. Index 0 is unused, 1 is the unsorted bin, bins 2-64 are small bins and bins 65-127 are large bins.
+    - By default, each thread has 64 singly-linked tcache bins. Each bin contains a maximum of 7 same-size chunks ranging from 24 to 1032 bytes on 64-bit systems and 12 to 516 bytes on 32-bit systems.
+    - Like small bins, each fast bin is responsible only for a single fixed chunk size. There are 10 such fast bins, covering chunks of size 16, 24, 32, 40, 48, 56, 64, 72, 80, and 88 bytes plus chunk metadata. 
+    
+    Vay chi can free mot thang lon hon 1032 bytes(64 bit) la duoc.
+    
+3. Co mot tip khi lam may bai heap la co the ghi de __free_hook hoac __malloc_hook
+4. Cai nay lien quan toi _IO_FILE, vtable https://blog.srikavin.me/posts/pwnable-tw-seethefile/
+5. Co the ghi de atoi() hoac atoll() bang printf() :)). Kha vui
+Doc link nay di nhe, day du cac kieu tan cong, house of orange, house of roman,...https://1ce0ear.github.io/2017/11/26/study-house-of-orange/
+1 bai write up ve house of orange https://www.programmersought.com/article/96714929506/
+1 bai viet khac ve _IO_FILE, kha hay https://sunichi.github.io/2018/11/29/leak-from-stdout/ 
+                                     https://wiki.x10sec.org/pwn/linux/io_file/introduction/
+                                     http://blog.naver.com/PostView.nhn?blogId=yjw_sz&logNo=221554665076&parentCategoryNo=&categoryNo=64&viewDate=&isShowPopularPosts=false&from=postView
+                                     https://ctf-wiki.org/pwn/linux/io_file/exploit-in-libc2.24/
+                                     http://blog.howdays.kr/index.php/2020/07/06/bypass-_io_vtable_check-in-glibc-2-29/
+                                     https://faraz.faith/2020-10-13-FSOP-lazynote/
+link CTF ne: https://github.com/bash-c/pwn_repo
+dia chi cua _IO_2_1_stdin_, _IO_2_1_stdout_, _IO_2_1_stderr_ o trong .rela.dyn section khi PIE bi disable nhe, con enable thi khong
+Bai nay danh cho kidding pwnable.tw https://blog.idiot.sg/2018-09-03/tokyowesterns-ctf-2018-load-pwn/
+Bai nay noi ve _dl_make_stack_executable https://x3h1n.github.io/2019/04/14/pwnable-tw-kidding/
+Bai nay huong dan cac buoc khi lam bai Kernel exploitation https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/#analyzing-the-kernel-module
+Cai nay noi ve loi dung vsyscall https://www.programmersought.com/article/12107618736/
